@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Course Site Finder</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+  color:#fff;
+}
+.home-container{
+  background:rgba(255,255,255,0.04);
+  border-radius:25px;
+  padding:60px 70px;
+  max-width:800px;
+  width:95%;
+  text-align:center;
+  backdrop-filter:blur(18px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.8);
+  border:1px solid rgba(255,215,0,0.2);
+}
+h1{
+  font-size:38px;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,#ffd700,#00c896);
+  background-clip: text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.user{
+  margin-bottom:30px;
+  color:#cfcfcf;
+}
+.button-group{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+.card-btn{
+  flex:1 1 180px;
+  padding:20px;
+  border-radius:15px;
+  cursor:pointer;
+  transition:0.3s;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,215,0,0.2);
+}
+.card-btn i{
+  font-size:25px;
+  margin-bottom:10px;
+  color:#ffd700;
+}
+.card-btn h3{
+  margin-bottom:8px;
+}
+.card-btn p{
+  font-size:13px;
+  color:#ccc;
+}
+.card-btn:hover{
+  transform:translateY(-5px) scale(1.05);
+  background:rgba(255,255,255,0.1);
+}
+.start{
+  border-color:rgba(0,200,150,0.4);
+}
+.logout{
+  border-color:rgba(255,80,80,0.3);
+}
+.logout i{
+  color:#ff6b6b;
+}
+@media(max-width:600px){
+  .home-container{
+    padding:40px 25px;
+  }
+  h1{
+    font-size:28px;
+  }
+  .button-group{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+<body>
+<div class="home-container">
+  <h1>Course Finder</h1>
+  <div class="user">
+    👤 Welcome, <b>{{ request.user.username }}</b>
+  </div>
+  <div class="button-group">
+    <div class="card-btn start" onclick="goToSelection()">
+      <i class="fas fa-search"></i>
+      <h3>Get Recommendation</h3>
+      <p>Find courses based on your interest</p>
+    </div>
+    <div class="card-btn" onclick="goToSaved()">
+      <i class="fas fa-bookmark"></i>
+      <h3>Saved List</h3>
+      <p>Your saved courses</p>
+    </div>
+    <div class="card-btn" onclick="goToHistory()">
+      <i class="fas fa-history"></i>
+      <h3>History</h3>
+      <p>Your past searches</p>
+    </div>
+    <div class="card-btn logout" onclick="logout()">
+      <i class="fas fa-sign-out-alt"></i>
+      <h3>Logout</h3>
+      <p>Exit your account</p>
+    </div>
+  </div>
+</div>
+<script>
+function goToSelection(){
+  window.location.href = "{% url 'selection' %}";
+}
+function goToHistory(){
+  window.location.href = "{% url 'history' %}";
+}
+function logout(){
+  window.location.href = "{% url 'logout' %}";
+}
+function goToSaved(){
+  window.location.href = "{% url 'saved' %}";
+}
+</script>
+</body>
+</html>

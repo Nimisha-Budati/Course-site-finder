@@ -1,0 +1,289 @@
+name,platform,course_url,skill_level,learning_mode,language,duration,rating,is_course_free,price,certificate_available
+Python Programming,Udemy,https://www.udemy.com/course/complete-python-bootcamp/,beginner,video,english,22 hours,4.6,False,3199,True
+Python Programming,Udemy,https://www.udemy.com/course/learn-advanced-level-programming-in-python/,advanced,video,english,22 hours,4.6,False,2619,True
+Python Programming,Udemy,https://www.udemy.com/course/python-pro-bootcamp-zero-to-hero/,beginner,video,hindi,39 hours,4.4,False,3219,True
+Python Programming,Udemy,https://www.udemy.com/course/python-learn-by-developing-real-world-application-in-hindi/,beginner,video,hindi,98 hours,4.3,False,799,True
+Python Programming,Udemy,https://www.udemy.com/course/advanced-python-programming-tutorial-hindi/,advanced,video,hindi,21.5 hours,3.9,False,2549,True
+Python Programming,NPTEL,https://nptel.ac.in/courses/106106182,beginner,video,english,12 weeks,0,True,0,True
+Python Programming,YouTube,https://www.youtube.com/watch?v=6i3EGqOBRiU,beginner,video,english,126 videos,0,True,0,False
+Python Programming,YouTube,https://www.youtube.com/watch?v=6i3EGqOBRiU,advanced,video,hindi,9 videos,0,True,0,False
+Python Programming,YouTube,https://www.youtube.com/watch?v=QLTdOEn79Rc,advanced,video,english,9 videos,0,True,0,False
+Python Programming,YouTube,https://www.youtube.com/watch?v=QXeEoD0pB3E,beginner,video,english,126 videos,0,True,0,False
+Python Programming,Coursera,https://www.coursera.org/specializations/python,beginner,video,english,80 hours,4.8,True,0,True
+Python Programming,W3Schools,https://www.w3schools.com/python/default.asp,beginner,text,english,,0,True,0,True
+Python Programming,Codechef,https://www.codechef.com/learn/course/python,beginner,video,english,10 hours,4.6,True,0,True
+Python Programming,Hyperskill,https://hyperskill.org/courses/2-python-developer,beginner,text,english,105 hours,4.6,False,,True
+Python Programming,Hyperskill,https://hyperskill.org/courses/2-python-developer,beginner,text,english,105 hours,4.6,True,,False
+Python Programming,Hyperskill,https://hyperskill.org/courses/6-introduction-to-python,beginner,text,english,25 hours,4.6,False,,True
+Python Programming,Hyperskill,https://hyperskill.org/courses/6-introduction-to-python,beginner,text,english,25 hours,4.6,True,,False
+Python Programming,Hyperskill,https://hyperskill.org/courses/22-python-core,beginner,text,english,119 hours,4.8,False,,True
+Python Programming,Hyperskill,https://hyperskill.org/courses/22-python-core,beginner,text,english,119 hours,4.8,True,,False
+Python Programming,edX,https://www.edx.org/certificates/professional-certificate/the-georgia-institute-of-technology-introduction-to-python-programming?index=rv_product_summary&queryId=15030a9994c70a8af65c17940ac736ff&position=2,beginner,video,english,,,True,,False
+Python Programming,edX,https://www.edx.org/certificates/professional-certificate/the-georgia-institute-of-technology-introduction-to-python-programming?index=rv_product_summary&queryId=15030a9994c70a8af65c17940ac736ff&position=2,beginner,video,english,,,False,,True
+Python Programming,Geeksforgeeks,https://www.geeksforgeeks.org/python/python-programming-language-tutorial/,beginner,text,english,,,True,,False
+Python Programming,Geeksforgeeks,https://www.geeksforgeeks.org/courses/master-python-complete-beginner-to-advanced,beginner,video,english,8 weeks,4.6,False,,True
+Python Programming,Codecademy,https://www.codecademy.com/learn/learn-python-3,beginner,video,english,14 hours,4.6,False,,True
+Python Programming,Codecademy,https://www.codecademy.com/learn/learn-python-3,beginner,video,english,14 hours,4.6,True,,False
+Python Programming,Codecademy,https://www.codecademy.com/learn/learn-advanced-python,advanced,video,english,6 hours,4.5,False,,True
+Python Programming,Codecademy,https://www.codecademy.com/learn/learn-advanced-python,advanced,video,english,6 hours,4.5,True,,False
+Python Programming,Pluralsight,https://www.pluralsight.com/courses/python-3-functional-programming,video,english,1.5 hours,4.5,False,,True
+Python Programming,Pluralsight,https://www.pluralsight.com/courses/python-3-functional-programming,video,english,1.5 hours,4.5,True,,False
+Python Programming,Sololearn,https://www.sololearn.com/en/learn/courses/python-introduction,beginner,text,english,,,False,,True
+Python Programming,Sololearn,https://www.sololearn.com/en/learn/courses/python-introduction,beginner,text,english,,,True,,False
+Python Programming,Sololearn,https://www.sololearn.com/en/learn/courses/python-intermediate,advanced,text,english,,,False,,True
+Python Programming,Sololearn,https://www.sololearn.com/en/learn/courses/python-intermediate,advanced,text,english,,,True,,False
+Python Programming,Freecodecamp,https://www.freecodecamp.org/learn/python-v9/,beginner,text,english,,,True,,True
+
+
+C Programming,Udemy,https://www.udemy.com/course/c-programming-for-beginners-/,beginner,video,english,25.5 hours,4.6,False,3439,True
+C Programming,Udemy,https://www.udemy.com/course/c-programming-pointers-from-zero-to-hero/,advanced,video,english,41 hours,4.5,False,3419,True
+C Programming,Udemy,https://www.udemy.com/course/c-programming-course-for-students-in-hindi-2022/,beginner,video,hindi,29.5 hours,4.5,False,2829,True
+C Programming,Udemy,https://www.udemy.com/course/c-programming-deep-dive/,beginner,video,hindi,44 hours,5,False,799,True
+C Programming,YouTube,https://www.youtube.com/watch?v=irqbmMNs2Bo,beginner,video,hindi,10.5 hours,0,True,0,False
+C Programming,YouTube,https://www.youtube.com/watch?v=_MF8L7ZxwRE,beginner,video,english,11 hours,0,True,0,False
+C Programming,YouTube,https://www.youtube.com/watch?v=EjavYOFoJJ0,beginner,video,english,150 videos,0,True,0,False
+C Programming,YouTube,https://www.youtube.com/watch?v=7Rb3ZJetvA8,advanced,video,english,15 videos,0,True,0,False
+C Programming,W3Schools,https://www.w3schools.com/c/index.php,beginner,text,english,,0,True,0,True
+C Programming,Codechef,https://www.codechef.com/learn/course/c,beginner,video,english,10 hours,4.6,True,0,True
+C Programming,Codechef,https://www.codechef.com/learn/course/c-sharp-beginner-part-2,beginner,video,english,10 hours,4.9,True,0,True
+C Programming,Codechef,https://www.codechef.com/learn/course/c-sharp,beginner,video,english,10 hours,4.7,True,0,True
+C Programming,edX,https://www.edx.org/certificates/professional-certificate/dartmouth-imtx-c-programming-with-linux?index=rv_product_summary&queryId=d4bd81d5c37fad397822142846734545&position=1,beginner,video,english,,,True,,False
+C Programming,edX,https://www.edx.org/certificates/professional-certificate/dartmouth-imtx-c-programming-with-linux?index=rv_product_summary&queryId=d4bd81d5c37fad397822142846734545&position=1,beginner,video,english,,,False,,True
+C Programming,Geeksforgeeks,https://www.geeksforgeeks.org/c/c-programming-language/,beginner,text,english,,,True,,False
+C Programming,Codecademy,https://www.codecademy.com/learn/paths/c,beginner,video,english,11 hours,,False,,True
+C Programming,Codecademy,https://www.codecademy.com/learn/paths/c,beginner,video,english,11 hours,,True,,False
+C Programming,Sololearn,https://www.sololearn.com/en/learn/courses/c-introduction,beginner,text,english,,,False,,True
+C Programming,Sololearn,https://www.sololearn.com/en/learn/courses/c-introduction,beginner,text,english,,,True,,False
+C Programming,Sololearn,https://www.sololearn.com/en/learn/courses/c-intermediate,advanced,text,english,,,False,,True
+C Programming,Sololearn,https://www.sololearn.com/en/learn/courses/c-intermediate,advanced,text,english,,,True,,False
+
+
+
+C++ Programming,Udemy,https://www.udemy.com/course/beginning-c-plus-plus-programming/,beginner,video,english,46 hours,4.6,False,609,True
+C++ Programming,Udemy,https://www.udemy.com/course/cpp-deep-dive/,beginner,video,english,30.5 hours,4.6,False,609,True
+C++ Programming,Udemy,https://www.udemy.com/course/the-complete-cpp-developer-course/,beginner,video,english,43.5 hours,4.7,False,609,True
+C++ Programming,Udemy,https://www.udemy.com/course/learn-intermediate-modern-c/,advanced,video,english,24 hours,4.6,False,609,True
+C++ Programming,Udemy,https://www.udemy.com/course/mastering-cplusplus-prateek-narang-hindi/,beginner,video,hindi,13 hours,4.4,False,699,True
+C++ Programming,Udemy,https://www.udemy.com/course/learning-c-all-essentials-for-students-and-learners-hindi/,beginner,video,hindi,37 hours,4.1,False,579,True
+C++ Programming,NPTEL,https://nptel.ac.in/courses/106105151,beginner,video,english,8 weeks,0,True,0,True
+C++ Programming,NPTEL,https://nptel.ac.in/courses/106101208,beginner,video,english,12 weeks,0,True,0,True
+C++ Programming,NPTEL,https://nptel.ac.in/courses/106105234,beginner,video,english,12 weeks,0,True,0,True
+C++ Programming,YouTube,https://www.youtube.com/watch?v=vLnPwxZdW4Y,beginner,video,english,4 hours,0,True,0,False
+C++ Programming,YouTube,https://www.youtube.com/watch?v=-TkoO8Z07hI,beginner,video,english,6 hours,0,True,0,False
+C++ Programming,YouTube,https://www.youtube.com/watch?v=8jLOx1hD3_o,advanced,video,english,31 hours,0,True,0,False
+C++ Programming,YouTube,https://www.youtube.com/watch?v=Cyha_W_gPdg,beginner,video,hindi,46 videos,0,True,0,False
+C++ Programming,YouTube,https://www.youtube.com/watch?v=05LLyH15ZWU,advanced,video,hindi,59 videos,0,True,0,False
+C++ Programming,W3Schools,https://www.w3schools.com/cpp/default.asp,beginner,text,english,,0,True,0,True
+C++ Programming,Codechef,https://www.codechef.com/learn/course/cpp,beginner,video,english,10 hours,4.7,True,0,True
+C++ Programming,Codechef,https://www.codechef.com/learn/course/college-programming-cpp,beginner,video,english,10 hours,4.7,True,0,True
+C++ Programming,Hyperskill,https://hyperskill.org/courses/74-introduction-to-c,beginner,text,english,16 hours,4.0,True,,False
+C++ Programming,Hyperskill,https://hyperskill.org/courses/74-introduction-to-c,beginner,text,english,16 hours,4.0,False,,True
+C++ Programming,edX,https://www.edx.org/certificates/professional-certificate/codio-c-programming-a-hands-on-introduction?index=rv_product_summary&queryId=34138780179746709850b1dd3132d733&position=2,beginner,video,english,,,True,,False
+C++ Programming,edX,https://www.edx.org/certificates/professional-certificate/codio-c-programming-a-hands-on-introduction?index=rv_product_summary&queryId=34138780179746709850b1dd3132d733&position=2,beginner,video,english,,,False,,True
+C++ Programming,Geeksforgeeks,https://www.geeksforgeeks.org/cpp/c-plus-plus/,beginner,text,english,,,True,,False
+C++ Programming,Geeksforgeeks,https://www.geeksforgeeks.org/courses/cpp-programming-basic-to-advanced,beginner,video,english,8 weeks,4.6,False,,True
+C++ Programming,Codecademy,https://www.codecademy.com/learn/learn-c-plus-plus,beginner,video,english,11 hours,4.4,False,,True
+C++ Programming,Codecademy,https://www.codecademy.com/learn/learn-c-plus-plus,beginner,video,english,11 hours,4.4,True,,False
+C++ Programming,Codecademy,https://www.codecademy.com/learn/learn-intermediate-c-plus-plus,advanced,video,english,20 hours,4.4,False,,True
+C++ Programming,Codecademy,https://www.codecademy.com/learn/learn-intermediate-c-plus-plus,advanced,video,english,20 hours,4.4,True,,False
+C++ Programming,Codecademy,https://www.codecademy.com/learn/learn-advanced-c-plus-plus,advanced,video,english,11 hours,4.2,False,,True
+C++ Programming,Codecademy,https://www.codecademy.com/learn/learn-advanced-c-plus-plus,advanced,video,english,11 hours,4.2,True,,False
+C++ Programming,Sololearn,https://www.sololearn.com/en/learn/courses/c-plus-plus-introduction,beginner,text,english,,,False,,True
+C++ Programming,Sololearn,https://www.sololearn.com/en/learn/courses/c-plus-plus-introduction,beginner,text,english,,,True,,False
+C++ Programming,Sololearn,https://www.sololearn.com/en/learn/courses/c-plus-plus-intermediate,advanced,text,english,,,False,,True
+C++ Programming,Sololearn,https://www.sololearn.com/en/learn/courses/c-plus-plus-intermediate,advanced,text,english,,,True,,False
+
+
+
+Java Programming,Udemy,https://www.udemy.com/course/java-se-programming/,beginner,video,english,61.5 hours,4.6,False,609,True
+Java Programming,Udemy,https://www.udemy.com/course/java-programming-tutorial-for-beginners/,beginner,video,english,60.5 hours,4.5,False,629,True
+Java Programming,Udemy,https://www.udemy.com/course/java-in-depth-become-a-complete-java-engineer/,advanced,video,english,83.5 hours,4.5,False,919,True
+Java Programming,Udemy,https://www.udemy.com/course/core-java-training-for-complete-beginners-in-hindi/,beginner,video,hindi,40 hours,4.4,False,559,True
+Java Programming,NPTEL,https://nptel.ac.in/courses/106105191,beginner,video,english,12 weeks,0,True,0,True
+Java Programming OOPS,NPTEL,https://nptel.ac.in/courses/106105224,beginner,video,english,12 weeks,0,True,0,True
+Java Programming,YouTube,https://www.youtube.com/watch?v=eIrMbAQSU34,beginner,video,english,2.3 hours,0,True,0,False
+Java Programming,YouTube,https://www.youtube.com/watch?v=BGTx91t8q50,beginner,video,english,12 hours,0,True,0,False
+Java Programming,YouTube,https://www.youtube.com/watch?v=4XTsAAHW_Tc,advanced,video,english,48 hours,0,True,0,False
+Java Programming,YouTube,https://www.youtube.com/watch?v=Ae-r8hsbPUo,advanced,video,english,5 hours,0,True,0,False
+Java Programming,YouTube,https://www.youtube.com/watch?v=yRpLlJmRo2w,beginner,video,hindi,39 videos,0,True,0,False
+Java Programming,YouTube,https://www.youtube.com/watch?v=ntLJmHOJ0ME,beginner,video,hindi,113 videos,0,True,0,False
+Java Programming,W3Schools,https://www.w3schools.com/java/default.asp,beginner,text,english,,0,True,0,True
+Java Programming,Codechef,https://www.codechef.com/learn/course/java,beginner,video,english,10 hours,4.7,True,0,True
+Java Programming,Hyperskill,https://hyperskill.org/courses/12-java-backend-developer-spring-boot,beginner,text,english,227 hours,4.7,False,,True
+Java Programming,Hyperskill,https://hyperskill.org/courses/12-java-backend-developer-spring-boot,beginner,text,english,227 hours,4.7,True,,False
+Java Programming,Hyperskill,https://hyperskill.org/courses/12-java-backend-developer-spring-boot,advanced,text,english,227 hours,4.7,False,,True
+Java Programming,Hyperskill,https://hyperskill.org/courses/12-java-backend-developer-spring-boot,advanced,text,english,227 hours,4.7,True,,False
+Java Programming,Hyperskill,https://hyperskill.org/courses/17-java-developer,beginner,text,english,169 hours,4.7,False,,True
+Java Programming,Hyperskill,https://hyperskill.org/courses/17-java-developer,beginner,text,english,169 hours,4.7,True,,False
+Java Programming,Hyperskill,https://hyperskill.org/courses/17-java-developer,advanced,text,english,169 hours,4.7,False,,True
+Java Programming,Hyperskill,https://hyperskill.org/courses/17-java-developer,advanced,text,english,169,hours,4.7,True,,False
+Java Programming,edX,https://www.edx.org/certificates/professional-certificate/uc3mx-introduction-java-programming?index=rv_product_summary&queryId=515f073c5a487e704a908e796609be20&position=1,beginner,video,english,,,True,,False
+Java Programming,edX,https://www.edx.org/certificates/professional-certificate/uc3mx-introduction-java-programming?index=rv_product_summary&queryId=515f073c5a487e704a908e796609be20&position=1,beginner,video,english,,,False,,True
+Java Programming,Geeksforgeeks,https://www.geeksforgeeks.org/java/java/,beginner,text,english,,,True,,False
+Java Programming,Geeksforgeeks,https://www.geeksforgeeks.org/advance-java/advanced-java/,advanced,text,english,,,True,,False
+Java Programming,Geeksforgeeks,https://www.geeksforgeeks.org/courses/java-online-course-complete-beginner-to-advanced,beginner,video,english,8 weeks,4.6,False,,True
+Java Programming,Codecademy,https://www.codecademy.com/learn/learn-java,beginner,video,english,17 hours,4.4,False,,True
+Java Programming,Codecademy,https://www.codecademy.com/learn/learn-java,beginner,video,english,17 hours,4.4,True,,False
+Java Programming,Codecademy,https://www.codecademy.com/learn/learn-intermediate-java,advanced,video,english,10 hours,4.3,False,,True
+Java Programming,Codecademy,https://www.codecademy.com/learn/learn-intermediate-java,advanced,video,english,10 hours,4.3,True,,False
+Java Programming,Codecademy,https://www.codecademy.com/learn/learn-advanced-java,advanced,video,english,2 hours,4.2,False,,True
+Java Programming,Codecademy,https://www.codecademy.com/learn/learn-advanced-java,advanced,video,english,2 hours,4.2,True,,False
+Java Programming,Sololearn,https://www.sololearn.com/en/learn/courses/java-intermediate,advanced,text,english,,,False,,True
+Java Programming,Sololearn,https://www.sololearn.com/en/learn/courses/java-intermediate,advanced,text,english,,,True,,False
+
+
+
+Web Development,Udemy,https://www.udemy.com/course/the-complete-web-development-bootcamp/,beginner,video,english,61 hours,4.7,False,569,True
+Web Development,Udemy,https://www.udemy.com/course/the-web-developer-bootcamp/,beginner,video,english,73.5 hours,4.7,False,569,True
+Web Development,Udemy,https://www.udemy.com/course/web-dev-master/,beginner,video,english,100 hours,4.6,False,569,True
+Web Development,Udemy,https://www.udemy.com/course/the-complete-front-end-web-development-course-in-hindi/,beginner,video,hindi,59.5 hours,4.5,False,569,True
+Web Development,YouTube,https://www.youtube.com/watch?v=tVzUXW6siu0,beginner,video,hindi,139 videos,0,True,0,False
+Web Development,YouTube,https://www.youtube.com/watch?v=nu_pCVPKzTk,beginner,video,hindi,7.5 hours,0,True,0,False
+Web Development,YouTube,https://www.youtube.com/watch?v=l1EssrLxt7E,beginner,video,english,58 videos,0,True,0,False
+Web Development,W3Schools,https://www.w3schools.com/html/default.asp,beginner,text,english,,0,True,0,True
+Web Development,Codechef,https://www.codechef.com/learn/course/web-dev-js,beginner,video,english,10 hours,4.6,True,0,True
+Web Development,Hyperskill,https://hyperskill.org/courses/156-introduction-to-full-stack-javascript-development,beginner,text,english,31 hours,4.9,False,,True
+Web Development,Hyperskill,https://hyperskill.org/courses/156-introduction-to-full-stack-javascript-development,beginner,text,english,31 hours,4.9,True,,False
+Web Development,edX,https://www.edx.org/bachelors/microbachelors/ibm-full-stack-application-development?index=rv_product_summary&queryId=4c2f09f6e01098a1d426b4654769cefc&position=1,beginner,video,english,,,True,,False
+Web Development,edX,https://www.edx.org/bachelors/microbachelors/ibm-full-stack-application-development?index=rv_product_summary&queryId=4c2f09f6e01098a1d426b4654769cefc&position=1,beginner,video,english,,,False,,True
+Web Development,Geeksforgeeks,https://www.geeksforgeeks.org/web-tech/web-technology/,beginner,text,english,,,True,,False
+Web Development,Sololearn,https://www.sololearn.com/en/learn/courses/web-development,beginner,text,english,,,False,,True
+Web Development,Sololearn,https://www.sololearn.com/en/learn/courses/web-development,beginner,text,english,,,True,,False
+
+
+
+SQL,Udemy,https://www.udemy.com/course/the-complete-sql-bootcamp-30-hours-go-from-zero-to-hero/,beginner,video,english,61 hours,4.7,False,569,True
+SQL,Udemy,https://www.udemy.com/course/the-complete-sql-bootcamp/,beginner,video,english,9 hours,4.7,False,619,True
+SQL,Udemy,https://www.udemy.com/course/sql-in-hindi/,beginner,video,hindi,7 hours,4.2,False,649,True
+SQL,YouTube,https://www.youtube.com/watch?v=HXV3zeQKqGY,beginner,video,english,4.5 hours,0,True,0,False
+SQL,YouTube,https://www.youtube.com/watch?v=hlGoQC332VM,beginner,video,hindi,3.5 hours,0,True,0,False
+SQL,W3Schools,https://www.w3schools.com/sql/default.asp,beginner,text,english,,0,True,0,True
+SQL,W3Schools,https://www.w3schools.com/postgresql/index.php,beginner,text,english,,0,True,0,True
+SQL,W3Schools,https://www.w3schools.com/mysql/default.asp,beginner,text,english,,0,True,0,True
+SQL,Codechef,https://www.codechef.com/learn/course/pl-sql,beginner,video,english,10 hours,4.8,True,0,True
+SQL,Codechef,https://www.codechef.com/learn/course/sql-at-work,beginner,video,english,10 hours,4.6,True,0,
+SQL,Codechef,https://www.codechef.com/learn/course/sql-intermediate,advanced,video,english,10 hours,4.6,True,0,True
+SQL,Leetcode,https://leetcode.com/explore/featured/card/sql-language//,beginner,video,english,,,False,8523,False
+SQL,Hyperskill,https://hyperskill.org/courses/31-introduction-to-sql,beginner,text,english,11 hours,4.5,True,,False
+SQL,Hyperskill,https://hyperskill.org/courses/31-introduction-to-sql,beginner,text,english,11 hours,4.5,False,,True
+SQL,edX,https://www.edx.org/xseries/stanfordonline-introduction-to-sql-databases?index=rv_product_summary&queryId=bc00dff9458c9bb0388d28fe83f6c93c&position=3,beginner,video,english,,,True,,False
+SQL,edX,https://www.edx.org/xseries/stanfordonline-introduction-to-sql-databases?index=rv_product_summary&queryId=bc00dff9458c9bb0388d28fe83f6c93c&position=3,beginner,video,english,,,False,,True
+SQL,Geeksforgeeks,https://www.geeksforgeeks.org/sql/sql-tutorial/,beginner,text,english,,,True,,False
+SQL,Sololearn,https://www.sololearn.com/en/learn/courses/sql-introduction,beginner,text,english,,,False,,True
+SQL,Sololearn,https://www.sololearn.com/en/learn/courses/sql-introduction,beginner,text,english,,,True,,False
+SQL,Sololearn,https://www.sololearn.com/en/learn/courses/sql-intermediate,advanced,text,english,,,False,,True
+SQL,Sololearn,https://www.sololearn.com/en/learn/courses/sql-intermediate,advanced,text,english,,,True,,False
+
+
+
+
+Artificial Intelligence,Udemy,https://www.udemy.com/course/the-ai-engineer-course-complete-ai-engineer-bootcamp/,beginner,video,english,29.5 hours,4.6,False,499,True
+Artificial Intelligence,Udemy,https://www.udemy.com/course/complete-ai-guide/,beginner,video,english,41.5 hours,4.6,False,509,True
+Artificial Intelligence,Udemy,https://www.udemy.com/course/intro-to-ai-a-beginners-guide-to-artificial-intelligence/,beginner,video,english,2.5 hours,4.6,False,%09,True
+Artificial Intelligence,Udemy,https://www.udemy.com/course/generative-ai-for-beginners-b/,beginner,video,english,4.5 hours,4.6,False,539,True
+Artificial Intelligence,Udemy,https://www.udemy.com/course/chatgpt-in-marketing-introduction-to-chatgpt-ai-marketing/,advanced,video,english,32 hours,4.8,False,479,True
+Artificial Intelligence,Udemy,https://www.udemy.com/course/deep-reinforcement-learning-in-pytorch/,advanced,video,english,15.5 hours,4.8,False,539,True
+Artificial Intelligence,Udemy,https://www.udemy.com/course/chatgpt-for-work-use-ai-at-work-to-improve-efficiency/,advanced,video,english,32 hours,4.9,False,479,True
+Artificial Intelligence,Udemy,https://www.udemy.com/course/datascience-and-machine-learning-with-python/,beginner,video,hindi,27.5 hours,4.5,False,489,True
+Artificial Intelligence,Udemy,https://www.udemy.com/course/ai-mastery-transform-your-world-with-mastering-ai-skills/,advanced,video,hindi,28.5 hours,4.0,False,619,True
+Artificial Intelligence,NPTEL,https://nptel.ac.in/courses/106105078,beginner,video,english,13 weeks,0,True,0,True
+Artificial Intelligence,NPTEL,https://nptel.ac.in/courses/106102220,beginner,video,english,12 weeks,0,True,0,True
+Artificial Intelligence,NPTEL,https://nptel.ac.in/courses/106105079,beginner,video,english,12 weeks,0,True,0,True
+Artificial Intelligence,NPTEL,https://nptel.ac.in/courses/112103280,beginner,video,english,12 weeks,0,True,0,True
+Artificial Intelligence,W3Schools,https://www.w3schools.com/ai/default.asp,beginner,text,english,,0,True,0,True
+Artificial Intelligence,W3Schools,https://www.w3schools.com/gen_ai/index.php,beginner,text,english,,0,True,0,True
+Artificial Intelligence,Codechef,https://www.codechef.com/learn/course/deep-learning-ai,beginner,video,english,10 hours,4.2,True,0,True
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/144-introduction-to-ai-engineering,beginner,text,english,41 hours,,False,,True
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/144-introduction-to-ai-engineering,beginner,text,english,41 hours,,True,,False
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/149-ai-agents-theory-and-practice,beginner,text,english,4 hours,,False,,True
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/149-ai-agents-theory-and-practice,beginner,text,english,4 hours,,True,,False
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/149-ai-agents-theory-and-practice,advanced,text,english,4 hours,,False,,True
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/149-ai-agents-theory-and-practice,advanced,text,english,4 hours,,True,,False
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/135-ai-tools-for-developers,advanced,text,english,11 hours,,False,,True
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/135-ai-tools-for-developers,advanced,text,english,11 hours,,True,,False
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/135-ai-tools-for-developers,beginner,text,english,11 hours,,False,,True
+Artificial Intelligence,Hyperskill,https://hyperskill.org/courses/135-ai-tools-for-developers,beginner,text,english,11 hours,,True,,False
+Artificial Intelligence,edX,https://www.edx.org/certificates/professional-certificate/harvardx-computer-science-for-artifical-intelligence?index=rv_product_summary&queryId=c37386c57179e1f744f625e723fd4cb1&position=3,beginner,video,english,,,True,,False
+Artificial Intelligence,edX,https://www.edx.org/certificates/professional-certificate/harvardx-computer-science-for-artifical-intelligence?index=rv_product_summary&queryId=c37386c57179e1f744f625e723fd4cb1&position=3,beginner,video,english,,,False,,True
+Artificial Intelligence,Geeksforgeeks,https://www.geeksforgeeks.org/machine-learning/ai-ml-and-data-science-tutorial-learn-ai-ml-and-data-science/,beginner,text,english,,,True,,False
+
+
+
+
+DSA,Codechef,https://www.codechef.com/learn/course/cpp-beginner-v2-p2,beginner,video,english,10 hours,4.4,True,0,True
+DSA,Codechef,https://www.codechef.com/learn/course/python-beginner-v2-p2,beginner,video,english,10 hours,4.6,True,0,True
+DSA,Codechef,https://www.codechef.com/learn/course/java-beginner-v2-p2,beginner,video,english,10 hours,4.6,True,0,True
+DSA,W3Schools,https://www.w3schools.com/dsa/index.php,beginner,text,english,,0,True,0,True
+DSA,Udemy,https://www.udemy.com/course/datastructurescncpp/,beginner,video,english,76 hours,4.7,False,529,True
+DSA,Udemy,https://www.udemy.com/course/data-structures-algorithms-python/,beginner,video,english,10.5 hours,4.7,False,539,True
+DSA,Udemy,https://www.udemy.com/course/complete-python-dsa-bootcamp/,beginner,video,english,61 hours,4.5,False,499,True
+DSA,Udemy,https://www.udemy.com/course/advanced-dsa-for-interview-level-problem-solving-java/,advanced,video,english,100 hours,5.0,False,489,True
+DSA,Udemy,https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/,advanced,video,english,16 hours,4.6,False,669,True
+DSA,Udemy,https://www.udemy.com/course/python-data-structures-and-algorithms-complete-guide/,advanced,video,english,23.5 hours,4.6,False,479,True
+DSA,Udemy,https://www.udemy.com/course/dsa-with-java-master-data-structures-algorithms/,advanced,video,hindi,14 hours,4.5,False,479,True
+DSA,Udemy,https://www.udemy.com/course/mastering-cplusplus-prateek-narang-hindi/,beginner,video,hindi,13 hours,4.4,False,619,True
+DSA,Udemy,https://www.udemy.com/course/python-fundamentals-for-dsa/,beginner,video,hindi,5 hours,4.4,False,479,True
+DSA,Leetcode,https://leetcode.com/explore/featured/card/leetcodes-interview-crash-course-data-structures-and-algorithms/,advanced,video,english,,,False,8523,False
+DSA,edX,https://www.edx.org/learn/computer-programming/tsinghua-university-data-structures-and-algorithm-design-part-i-shu-ju-jie-gou-yu-suan-fa-she-ji-shang?index=rv_product_summary&queryId=b07feda3beef3d320784a5d6843da254&position=3,beginner,video,english,,,True,,False
+DSA,edX,https://www.edx.org/learn/computer-programming/tsinghua-university-data-structures-and-algorithm-design-part-i-shu-ju-jie-gou-yu-suan-fa-she-ji-shang?index=rv_product_summary&queryId=b07feda3beef3d320784a5d6843da254&position=3,beginner,video,english,,,False,,True
+DSA,Geeksforgeeks,https://www.geeksforgeeks.org/dsa/python-data-structures-and-algorithms/,beginner,text,english,,,True,,False
+DSA,Geeksforgeeks,https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/,beginner,text,english,,,True,,False
+DSA,Geeksforgeeks,https://www.geeksforgeeks.org/dsa/advanced-data-structures/,advanced,text,english,,,True,,False
+DSA,Geeksforgeeks,https://www.geeksforgeeks.org/c/learn-dsa-in-c/,beginner,text,english,,,True,,False
+DSA,Geeksforgeeks,https://www.geeksforgeeks.org/cpp/learn-dsa-in-cpp/,beginner,text,english,,,True,,False
+DSA,Geeksforgeeks,https://www.geeksforgeeks.org/dsa/dsa-in-java/,beginner,text,english,,,True,,False
+DSA,Geeksforgeeks,https://www.geeksforgeeks.org/courses/dsa-to-development-complete-guide,beginner,video,english,,4.4,False,,True
+DSA,Geeksforgeeks,https://www.geeksforgeeks.org/courses/dsa-self-paced,beginner,video,english,,4.7,False,,True
+
+
+
+
+Git-Github,Codechef,https://www.codechef.com/learn/course/git-github,beginner,video,english,10 hours,4.7,True,0,True
+Git-Github,W3Schools,https://www.w3schools.com/git/default.asp,beginner,text,english,,0,True,0,True
+Git-Github,Udemy,https://www.udemy.com/course/git-and-github-bootcamp/,beginner,video,english,17 hours,4.7,False,539,True
+Git-Github,Udemy,https://www.udemy.com/course/git-github-practical-guide/,beginner,video,english,10.5 hours,4.6,False,559,True
+Git-Github,Udemy,https://www.udemy.com/course/git-and-github-complete-guide/,advanced,video,english,23.5 hours,4.4,False,539,True
+Git-Github,Udemy,https://www.udemy.com/course/git-and-github-course/,beginner,video,english,2.5 hours,4.7,False,479,True
+Git-Github,Udemy,https://www.udemy.com/course/mastering-git-and-github-bootcamp-hindi/,beginner,video,hindi,3 hours,4.6,False,509,True
+Git-Github,Udemy,https://www.udemy.com/course/zero-to-hero-git-masterclass/,advanced,video,hindi,14.5 hours,5.0,False,479,True
+Git-Github,Udemy,https://www.udemy.com/course/git-gitlab-devops-engineering-advanced-gitlab-cicd-a/,advanced,video,hindi,13 hours,4.5,False,529,True
+Git-Github,Udemy,https://www.udemy.com/course/github-ultimate/,advanced,video,english,6.5 hours,4.5,False,509,True
+Git-Github,edX,https://www.edx.org/learn/github/ibm-git-and-github-basics,beginner,video,english,,,True,,False
+Git-Github,edX,https://www.edx.org/learn/github/ibm-git-and-github-basics,beginner,video,english,,,False,,True
+Git-Github,Codecademy,https://www.codecademy.com/learn/learn-git,beginner,video,english,4 hours,4.5,False,,True
+Git-Github,Codecademy,https://www.codecademy.com/learn/learn-git,beginner,video,english,4 hours,4.5,True,,False
+
+
+
+
+OS,Codechef,https://www.codechef.com/learn/course/operating-system,beginner,video,english,10 hours,4.7,True,0,True
+OS,Udemy,https://www.udemy.com/course/fundamentals-of-operating-systems/,beginner,video,english,22.5 hours,4.7,False,509,True
+OS,Udemy,https://www.udemy.com/course/operating-system-j/,beginner,video,english,8 hours,4.3,False,489,True
+OS,Udemy,https://www.udemy.com/course/linux-kernel-filesystem-development/,advanced,video,english,6.5 hours,4.7,False,479,True
+OS,Udemy,https://www.udemy.com/course/master-linux-full-course-in-hindi-for-beginners-to-experts/,advanced,video,hindi,7.5 hours,3.5,False,519,True
+OS,Udemy,https://www.udemy.com/course/linux-in-hindi/,beginner,video,hindi,18 hours,3.9,False,479,True
+OS,Codecademy,https://www.codecademy.com/learn/operating-systems-introduction,beginner,video,english,1 hours,4.4,False,,True
+OS,Codecademy,https://www.codecademy.com/learn/operating-systems-introduction,beginner,video,english,1 hours,4.4,True,,False
+OS,Codecademy,https://www.codecademy.com/learn/operating-systems-process-synchronization-and-memory-management,beginner,video,english,1 hours,4.3,False,,True
+OS,Codecademy,https://www.codecademy.com/learn/operating-systems-process-synchronization-and-memory-management,beginner,video,english,1 hours,4.3,True,,False
+
+
+
+
+OOPS,Codechef,https://www.codechef.com/learn/course/oops-java,advanced,video,english,10 hours,4.5,True,0,True
+OOPS,Codechef,https://www.codechef.com/learn/course/college-oops-cpp,advanced,video,english,10 hours,4.7,True,0,True
+OOPS,Codechef,https://www.codechef.com/learn/course/oops-concepts-in-python,advanced,video,english,10 hours,4.7,True,0,True
+OOPS,Udemy,https://www.udemy.com/course/python-object-oriented-programming-oop/,beginner,video,english,17.5 hours,4.6,False,529,True
+OOPS,Udemy,https://www.udemy.com/course/python-oop-object-oriented-programming-from-beginner-to-pro/,beginner,video,english,6.5 hours,4.7,False,499,True
+OOPS,Udemy,https://www.udemy.com/course/oop-learnit/,beginner,video,english,24.5 hours,4.5,False,509,True
+OOPS,Udemy,https://www.udemy.com/course/the-python-pro-course/,advanced,video,english,23 hours,4.6,False,549,True
+OOPS,Udemy,https://www.udemy.com/course/fundamentals-of-object-oriented-programing-cplusplus/,beginner,video,english,7 hours,4.9,False,479,True
+OOPS,edX,https://www.edx.org/certificates/professional-certificate/gtx-introduction-to-object-oriented-programming-with-java?index=rv_product_summary&queryId=7f4f82aeb944aa8c06e7ecdad1666426&position=2,beginner,video,english,,,True,,False
+OOPS,edX,https://www.edx.org/certificates/professional-certificate/gtx-introduction-to-object-oriented-programming-with-java?index=rv_product_summary&queryId=7f4f82aeb944aa8c06e7ecdad1666426&position=2,beginner,video,english,,,False,,True
+OOPS,Codecademy,https://www.codecademy.com/learn/learn-object-oriented-programming-with-c-plus-plus,advanced,video,english,10 hours,4.6,False,,True
+OOPS,Codecademy,https://www.codecademy.com/learn/learn-object-oriented-programming-with-c-plus-plus,advanced,video,english,10 hours,4.6,True,,False
+OOPS,Pluralsight,https://www.pluralsight.com/courses/python-object-oriented-programming,video,english,1.5 hours,4.5,False,,True
+OOPS,Pluralsight,https://www.pluralsight.com/courses/python-object-oriented-programming,video,english,1.5 hours,4.5,True,,False
+OOPS,Pluralsight,https://www.pluralsight.com/courses/java-se-17-object-oriented-programming,video,english,3.5 hours,4.9,False,,True
+OOPS,Pluralsight,https://www.pluralsight.com/courses/java-se-17-object-oriented-programming,video,english,3.5 hours,4.9,True,,False
+
