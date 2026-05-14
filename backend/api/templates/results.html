@@ -1,0 +1,734 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+  color:#fff;
+  padding:25px;
+}
+
+.top-bar{
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom:10px;
+}
+
+.home-btn{
+  padding:10px 18px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,#ffd700,#00c896);
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+}
+
+h2{
+  text-align:center;
+  margin:25px 0;
+  font-size:26px;
+  background:linear-gradient(90deg,#ffd700,#00c896);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+
+.course-card{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:16px;
+  border:1px solid rgba(255,215,0,0.2);
+}
+
+.save-btn,.review-btn{
+  margin-top:10px;
+  padding:10px;
+  width:100%;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.save-btn{
+  background:linear-gradient(90deg,#00c896,#ffd700);
+  color:#000;
+}
+
+.review-btn{
+  background:transparent;
+  border:2px solid #6366f1;
+  color:#6366f1;
+}
+
+.review-btn:hover{
+  background:#6366f1;
+  color:#fff;
+}
+
+.review-container{
+  max-width:900px;
+  margin:30px auto;
+}
+
+.review-card{
+  position:relative;
+  background:rgba(255,255,255,0.05);
+  padding:18px;
+  border-radius:14px;
+  border:1px solid rgba(255,215,0,0.2);
+  margin-bottom:10px;
+}
+
+.delete-btn{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  border:none;
+  background:#ef4444;
+  color:#fff;
+  cursor:pointer;
+}
+
+form{
+  max-width:500px;
+  margin:auto;
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:15px;
+}
+
+textarea{
+  width:100%;
+  height:90px;
+  margin-top:10px;
+  padding:12px;
+  border-radius:10px;
+  background:#222;
+  color:#fff;
+  border:none;
+}
+
+button{
+  margin-top:12px;
+  padding:12px;
+  width:100%;
+  background:linear-gradient(90deg,#ffd700,#00c896);
+  border:none;
+  color:#000;
+  font-weight:600;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.selected-course{
+  background:#1e293b;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:10px;
+  color:#ffd700;
+}
+
+.star{
+  font-size:22px;
+  cursor:pointer;
+  color:gray;
+}
+
+.star.active{
+  color:gold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+  <a href="{% url 'home' %}">
+    <button class="home-btn">🏠 Home</button>
+  </a>
+</div>
+
+<h2>📚 Courses</h2>
+
+<div class="course-grid">
+{% for course in courses %}
+<div class="course-card">
+
+<h3>{{ course.name }}</h3>
+<p><b>Platform:</b> {{ course.platform }}</p>
+<p><b>Price:</b> {{ course.price }}</p>
+<p><b>Duration:</b> {{ course.duration }}</p>
+<p><b>Rating:</b> {{ course.rating }}</p>
+
+{% if course.url %}
+<a href="{{ course.url }}" target="_blank">🔗 View Course</a>
+{% endif %}
+<button class="review-btn"
+onclick="selectCourse('{{ course.id }}','{{ course.name }}','{{ course.url }}')">
+Review this course
+</button>
+<button onclick="saveCourse('{{ course.id }}','{{ course.name|escapejs }}','{{ course.url|escapejs }}')">
+    💾 Save Course
+</button>
+</div>
+{% endfor %}
+</div>
+<hr>
+
+<h2>🌟 Reviews</h2>
+
+<div class="review-container">
+{% for review in reviews %}
+<div class="review-card">
+
+{% if user == review.user %}
+<button class="delete-btn" data-id="{{ review.id }}">✖</button>
+{% endif %}
+
+<div>{{ review.user.username }}</div>
+
+{% if review.course %}
+<a href="{{ review.course.course_url }}" target="_blank">
+{{ review.course.name }}
+</a>
+{% elif review.course_url %}
+<a href="{{ review.course_url }}" target="_blank">
+{{ review.course_name }}</a>
+{% endif %}
+
+<p>{{ review.comment }}</p>
+
+</div>
+{% endfor %}
+</div>
+
+<hr>
+
+<h2>Add Review</h2>
+
+<form id="reviewForm">
+{% csrf_token %}
+
+<div id="selectedCourseBox" class="selected-course">
+Select a course above
+</div>
+
+<input type="hidden" name="course_url" id="course_url">
+<input type="hidden" name="course_name" id="course_name">
+<input type="hidden" name="course_id" id="course_id">
+
+<div>
+<span class="star" data-value="1">★</span>
+<span class="star" data-value="2">★</span>
+<span class="star" data-value="3">★</span>
+<span class="star" data-value="4">★</span>
+<span class="star" data-value="5">★</span>
+</div>
+
+<input type="hidden" name="rating" id="rating">
+
+<textarea name="comment" placeholder="Write review..." required></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<script>
+
+/*function selectCourse(id,name,url){
+
+    if (!id || id === "" || id === "None") {
+        id = "youtube";
+    }
+    document.getElementById("course_id").value = id;
+    document.getElementById("course_url").value = url;
+    document.getElementById("course_name").value = name;
+    document.getElementById("selectedCourseBox").innerHTML =
+    '📚 <a href="'+url+'" target="_blank">'+name+'</a>';
+
+    console.log("Selected course ID:", id);
+}*/
+function selectCourse(id, name, url){
+
+    if (!id || id === "" || id === "None") {
+        id = "youtube";
+    }
+
+    document.getElementById("course_id").value = id;
+    document.getElementById("course_url").value = url;
+    document.getElementById("course_name").value = name;
+    document.getElementById("selectedCourseBox").innerHTML =
+        `📚 <a href="${url}" target="_blank">${name}</a>`;
+    document.getElementById("reviewForm").scrollIntoView({ behavior: "smooth" });
+}
+function saveCourse(id, name, url){
+    console.log("CLICKED:", id, name, url); // 🔥 add this
+    let courseId = (!id || id === "" || id === "None" || id === "youtube") ? null : id;
+    fetch(`/save-course/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body: JSON.stringify({
+            course_id: courseId,
+            course_name: name,
+            course_url: url
+        })
+    })
+    .then(res => res.json())
+    .then(data => alert(data.message));
+}
+document.querySelectorAll(".star").forEach(star=>{
+    star.addEventListener("click",function(){
+        let val=this.dataset.value;
+        document.getElementById("rating").value=val;
+        document.querySelectorAll(".star").forEach(s=>s.classList.remove("active"));
+        for(let i=0;i<val;i++){
+            document.querySelectorAll(".star")[i].classList.add("active");
+        }
+    });
+});
+
+document.getElementById("reviewForm").addEventListener("submit",function(e){
+    e.preventDefault();
+    let courseId=document.getElementById("course_id").value;
+    let rating=document.getElementById("rating").value;
+    if (!courseId){
+      alert("Select course");
+      return;
+    }
+    if(!rating){
+        alert("Select rating");
+        return;
+    }
+    fetch("/add-review/",{
+        method:"POST",
+        headers:{
+            "X-CSRFToken":document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body:new FormData(this)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        alert(data.message);
+        location.reload();
+    });
+});
+
+document.querySelectorAll(".delete-btn").forEach(btn=>{
+    btn.addEventListener("click",function(){
+        let id=this.dataset.id;
+
+        fetch(`/delete-review/${id}/`,{
+            method:"POST",
+            headers:{
+                "X-CSRFToken":document.querySelector('[name=csrfmiddlewaretoken]').value
+            }
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            alert(data.message);
+            location.reload();
+        });
+    });
+});
+</script>
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+    color:#fff;
+    padding:25px;
+}
+
+.top-bar{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:10px;
+}
+
+.home-btn{
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#ffd700,#00c896);
+    color:#000;
+    font-weight:600;
+    cursor:pointer;
+}
+
+h2{
+    text-align:center;
+    margin:25px 0;
+    font-size:26px;
+    background:linear-gradient(90deg,#ffd700,#00c896);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.course-card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:16px;
+    border:1px solid rgba(255,215,0,0.2);
+}
+
+.save-btn,.review-btn{
+    margin-top:10px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.save-btn{
+    background:linear-gradient(90deg,#00c896,#ffd700);
+    color:#000;
+}
+
+.review-btn{
+    background:transparent;
+    border:2px solid #6366f1;
+    color:#6366f1;
+}
+
+.review-btn:hover{
+    background:#6366f1;
+    color:#fff;
+}
+
+.container{
+    display:flex;
+    gap:20px;
+}
+
+.left{
+    flex:2;
+}
+
+.right{
+    flex:1;
+}
+
+.review-container{
+    width:100%;
+}
+
+.review-card{
+    position:relative;
+    background:rgba(255,255,255,0.05);
+    padding:18px;
+    border-radius:14px;
+    border:1px solid rgba(255,215,0,0.2);
+    margin-bottom:10px;
+}
+
+.delete-btn{
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    border:none;
+    background:#ef4444;
+    color:#fff;
+    cursor:pointer;
+}
+
+form{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    position:sticky;
+    top:20px;
+}
+
+textarea{
+    width:100%;
+    height:90px;
+    margin-top:10px;
+    padding:12px;
+    border-radius:10px;
+    background:#222;
+    color:#fff;
+    border:none;
+}
+
+button{
+    margin-top:12px;
+    padding:12px;
+    width:100%;
+    background:linear-gradient(90deg,#ffd700,#00c896);
+    border:none;
+    color:#000;
+    font-weight:600;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.selected-course{
+    background:#1e293b;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:10px;
+    color:#ffd700;
+}
+
+.star{
+    font-size:22px;
+    cursor:pointer;
+    color:gray;
+}
+
+.star.active{
+    color:gold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <a href="{% url 'home' %}">
+        <button class="home-btn">🏠 Home</button>
+    </a>
+</div>
+
+<h2>📚 Courses</h2>
+
+<div class="course-grid">
+{% for course in courses %}
+    <div class="course-card">
+
+        <h3>{{ course.name }}</h3>
+        <p><b>Platform:</b> {{ course.platform }}</p>
+        <p><b>Price:</b> {{ course.price }}</p>
+        <p><b>Duration:</b> {{ course.duration }}</p>
+        <p><b>Rating:</b> {{ course.rating }}</p>
+
+        {% if course.url %}
+        <a href="{{ course.url }}" target="_blank">🔗 View Course</a>
+        {% endif %}
+
+        <button class="review-btn"
+                onclick="selectCourse('{{ course.id }}','{{ course.name }}','{{ course.url }}')">
+            Review this course
+        </button>
+
+        <button onclick="saveCourse('{{ course.id }}','{{ course.name|escapejs }}','{{ course.url|escapejs }}')">
+            💾 Save Course
+        </button>
+
+    </div>
+{% endfor %}
+</div>
+
+<h2>🌟 Reviews</h2>
+
+<div class="container">
+
+    <div class="left">
+
+        <div class="review-container">
+            {% for review in reviews %}
+            <div class="review-card">
+
+                {% if user == review.user %}
+                <button class="delete-btn" data-id="{{ review.id }}">✖</button>
+                {% endif %}
+
+                <div>{{ review.user.username }}</div>
+
+                {% if review.course %}
+                <a href="{{ review.course.course_url }}" target="_blank">
+                    {{ review.course.name }}
+                </a>
+                {% elif review.course_url %}
+                <a href="{{ review.course_url }}" target="_blank">
+                    {{ review.course_name }}</a>
+                {% endif %}
+
+                <p>{{ review.comment }}</p>
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <form id="reviewForm">
+            {% csrf_token %}
+
+            <div id="selectedCourseBox" class="selected-course">
+                Select a course above
+            </div>
+
+            <input type="hidden" name="course_url" id="course_url">
+            <input type="hidden" name="course_name" id="course_name">
+            <input type="hidden" name="course_id" id="course_id">
+
+            <div>
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+
+            <input type="hidden" name="rating" id="rating">
+
+            <textarea name="comment" placeholder="Write review..." required></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+
+function selectCourse(id, name, url){
+
+    if (!id || id === "" || id === "None") {
+        id = "youtube";
+    }
+
+    document.getElementById("course_id").value = id;
+    document.getElementById("course_url").value = url;
+    document.getElementById("course_name").value = name;
+    document.getElementById("selectedCourseBox").innerHTML =
+        `📚 <a href="${url}" target="_blank">${name}</a>`;
+
+    document.getElementById("reviewForm").scrollIntoView({ behavior: "smooth" });
+}
+
+function saveCourse(id, name, url){
+
+    let courseId = (!id || id === "" || id === "None" || id === "youtube") ? null : id;
+
+    fetch("/save-course/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body: JSON.stringify({
+            course_id: courseId,
+            course_name: name,
+            course_url: url
+        })
+    })
+    .then(res => res.json())
+    .then(data => alert(data.message));
+}
+
+document.querySelectorAll(".star").forEach(star=>{
+    star.addEventListener("click",function(){
+        let val=this.dataset.value;
+        document.getElementById("rating").value=val;
+        document.querySelectorAll(".star").forEach(s=>s.classList.remove("active"));
+        for(let i=0;i<val;i++){
+            document.querySelectorAll(".star")[i].classList.add("active");
+        }
+    });
+});
+
+document.getElementById("reviewForm").addEventListener("submit",function(e){
+    e.preventDefault();
+
+    let courseId=document.getElementById("course_id").value;
+    let rating=document.getElementById("rating").value;
+
+    if (!courseId){
+        alert("Select course");
+        return;
+    }
+
+    if(!rating){
+        alert("Select rating");
+        return;
+    }
+
+    fetch("/add-review/",{
+        method:"POST",
+        headers:{
+            "X-CSRFToken":document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body:new FormData(this)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        alert(data.message);
+        location.reload();
+    });
+});
+
+document.querySelectorAll(".delete-btn").forEach(btn=>{
+    btn.addEventListener("click",function(){
+        let id=this.dataset.id;
+
+        fetch(`/delete-review/${id}/`,{
+            method:"POST",
+            headers:{
+                "X-CSRFToken":document.querySelector('[name=csrfmiddlewaretoken]').value
+            }
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            alert(data.message);
+            location.reload();
+        });
+    });
+});
+
+</script>
+
+</body>
+</html>

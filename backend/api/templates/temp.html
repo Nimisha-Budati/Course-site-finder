@@ -1,0 +1,212 @@
+<!--
+@login_required
+def add_favorite(request):
+    if request.method == "POST":
+        course_id = request.POST.get("course_id")
+        course = get_object_or_404(Course, id=course_id)
+
+        Favorite.objects.get_or_create(
+            user=request.user,
+            course=course
+        )
+
+        return JsonResponse({"status": "added"})
+        
+        
+@login_required
+def remove_favorite(request):
+    if request.method == "POST":
+        course_id = request.POST.get("course_id")
+
+        Favorite.objects.filter(
+            user=request.user,
+            course_id=course_id
+        ).delete()
+
+        return JsonResponse({"status": "removed"})
+
+@login_required
+def history_view(request):
+    history = UserHistory.objects.filter(user=request.user).order_by("-searched_at")
+    return render(request, "history.html", {"history": history})
+
+
+# 🔥 ALIAS (for URLs)
+@login_required
+def saved_view(request):
+    return favorites_view(request)
+
+@login_required
+def mark_helpful(request):
+    if request.method == "POST":
+        review_id = request.POST.get("review_id")
+        review = get_object_or_404(Review, id=review_id)
+
+        # ✅ Prevent multiple clicks by same user (optional but good)
+        review.helpful_count += 1
+        review.save()
+
+        return JsonResponse({
+            "status": "updated",
+            "count": review.helpful_count
+        })
+
+    return JsonResponse({"status": "error"})
+
+
+modeld.py
+
+
+class Favorite(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+
+    added_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'course')  # no duplicates
+
+    def __str__(self):
+        return f"{self.user.username} - {self.course.name}"
+
+
+# 🕒 USER HISTORY
+class UserHistory(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    course_name = models.CharField(max_length=300)
+
+    skill_level = models.CharField(max_length=20, blank=True, null=True)
+
+    language = models.CharField(max_length=50, blank=True, null=True)
+
+    searched_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-searched_at']
+
+    def __str__(self):
+        return f"{self.user.username} - {self.course_name}"
+
+
+
+
+    @login_required
+def selection_view(request):
+
+    if request.method == "POST":
+
+        # ✅ INPUTS
+        course_name = request.POST.get("course", "").strip()
+        skill_level = request.POST.get("skillLevel", "").lower()
+        plan = request.POST.get("plan", "").lower()
+        certificate = request.POST.get("certificate", "").lower()
+        learning_mode = request.POST.get("learningMode", "").lower()
+        language = request.POST.get("language", "").lower()
+
+        # ✅ SAVE USER PREFERENCE
+        UserPreference.objects.create(
+            user=request.user,
+            course_name=course_name,
+            skill_level=skill_level,
+            plan=plan,
+            certification_needed=(certificate == "yes"),
+            learning_mode=learning_mode,
+            language=language,
+        )
+        if course_name:
+            SearchHistory.objects.create(
+            user=request.user,
+            query=course_name
+        )
+        # 🔥 BASE QUERY
+        queryset = Course.objects.filter(
+            name__icontains=course_name
+        )
+
+        # 🔥 APPLY FILTERS
+        if skill_level:
+            queryset = queryset.filter(skill_level__iexact=skill_level)
+
+        if language:
+            queryset = queryset.filter(language__iexact=language)
+
+        if learning_mode:
+            queryset = queryset.filter(learning_mode__iexact=learning_mode)
+
+        if plan == "free":
+            queryset = queryset.filter(is_course_free=True)
+        elif plan == "paid":
+            queryset = queryset.filter(is_course_free=False)
+
+        if certificate == "yes":
+            queryset = queryset.filter(certificate_available=True)
+
+        # 🔥 IF EMPTY → RELAX FILTERS
+        if not queryset.exists():
+            queryset = Course.objects.filter(
+                name__icontains=course_name
+            )
+
+        # 🔥 RANKING
+        queryset = queryset.order_by(
+            '-popularity_score',
+            '-views_count'
+        )
+
+        # 🔥 LIMIT
+        top_courses = queryset[:5]
+
+        # ✅ BUILD DATA
+        final_courses = []
+
+        for course in top_courses:
+            final_courses.append({
+                "id": course.id,
+                "name": course.name,
+                "platform": course.platform.name if course.platform else "-",
+
+                # ⭐ USE DB RATING HERE
+                "rating": course.rating if course.rating is not None else 0,
+
+                "duration": course.duration or "N/A",
+                "price": "Free" if course.is_course_free else f"₹{course.price}" if course.price else "N/A",
+                "certificate": course.certificate_available,
+                "url": course.course_url,
+
+                # ❌ REMOVE GLOBAL reviews (not needed)
+                "reviews": []
+            })
+
+        # 🔥 YOUTUBE LOGIC
+        youtube_courses = []
+
+        allow_youtube = (plan == "free" or not final_courses) and certificate != "yes"
+
+        if allow_youtube and learning_mode != "text":
+            try:
+                youtube_courses = get_youtube_courses(course_name, language) or []
+            except:
+                youtube_courses = []
+
+        for yt in youtube_courses[:(5 - len(final_courses))]:
+            final_courses.append({
+                "id": None,
+                "name": yt.get("name"),
+                "platform": "YouTube",
+                "rating": 0,
+                "duration": yt.get("duration", "-"),
+                "price": "Free",
+                "certificate": False,
+                "url": yt.get("course_url"),
+                "reviews": []
+            })
+
+        return render(request, "results.html", {
+            "courses": final_courses,
+            "reviews": Review.objects.select_related('user').order_by('-created_at')
+        })
+
+    return render(request, "selection.html")
+    -->

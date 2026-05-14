@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Course Site Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px 15px;
+      color: #fff;
+    }
+    .about-page {
+      width: 100%;
+      max-width: 700px;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(18px);
+      border-radius: 25px;
+      padding: 50px 40px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+      border: 1px solid rgba(255,215,0,0.2);
+      animation: fadeIn 0.7s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 22px;
+      background: linear-gradient(90deg, #ffd700, #00c896);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    p, li {
+      color: #dcdcdc;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    li::marker {
+      color: #ffd700;
+    }
+    .back-button {
+      margin-top: 25px;
+      padding: 12px 28px;
+      font-size: 15px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+      background: linear-gradient(135deg, #ffd700, #00c896);
+      color: #000;
+      box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+    }
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(0,200,150,0.6);
+    }
+    .back-button:active {
+      transform: scale(0.96);
+    }
+    @media(max-width:600px){
+      .about-page {
+        padding: 35px 20px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="about-page">
+    <h2>About Course Site Finder</h2>
+    <p>
+      Course Site Finder is a web application designed to help learners quickly
+      find the best online platforms for their desired courses. By entering
+      preferences such as skill level, budget, language, certification, learning
+      mode, and course duration, the system recommends the top platforms for
+      efficient learning.
+    </p>
+    <h2>Key Features</h2>
+    <ul>
+      <li>Personalized course recommendations based on user preferences</li>
+      <li>Filter courses by skill level, budget, certification, language, learning mode, and duration</li>
+      <li>Displays top courses with ratings, price, certification, duration, and direct website links</li>
+      <li>Clean and user-friendly interface for easy navigation</li>
+    </ul>
+    <h2>Developed By</h2>
+    <p>B. Nimisha Sri Sai, B. Anitha</p>
+    <button class="back-button" onclick="window.location.href = homeUrl;">
+      ← Back
+    </button>
+  </div>
+  <script>
+    const homeUrl = "{% url 'dashboard' %}";
+  </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Course Site Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #fff;
+    }
+    .dashboard-container {
+      background: rgba(255,255,255,0.04);
+      border-radius: 25px;
+      padding: 60px 70px;
+      max-width: 750px;
+      width: 95%;
+      text-align: center;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+      border: 1px solid rgba(255,215,0,0.2);
+      animation: fadeIn 0.7s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #ffd700, #00c896);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    p {
+      color: #cfcfcf;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .dashboard-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex: 1 1 160px;
+      padding: 14px 0;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+      min-width: 140px;
+    }
+    .dashboard-button i {
+      font-size: 16px;
+    }
+    .start-btn {
+      background: linear-gradient(135deg, #ffd700, #00c896);
+      color: #000;
+      box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+    }
+    .about-btn {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .logout-btn {
+      background: rgba(255,80,80,0.15);
+      color: #ff6b6b;
+      border: 1px solid rgba(255,80,80,0.3);
+    }
+    .dashboard-button:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+    .start-btn:hover {
+      box-shadow: 0 0 20px rgba(0,200,150,0.6);
+    }
+    .about-btn:hover {
+      background: rgba(255,255,255,0.15);
+    }
+    .logout-btn:hover {
+      background: rgba(255,80,80,0.25);
+    }
+    .dashboard-button:active {
+      transform: scale(0.96);
+    }
+    @media(max-width:600px){
+      .dashboard-container {
+        padding: 40px 25px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .button-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Course Site Finder</h1>
+    <p>
+      Welcome, <b>{{ request.user.username }}</b> 👋  
+      Select an option to continue
+    </p>
+    <div class="button-group">
+      <button class="dashboard-button start-btn" data-url="{% url 'home' %}">
+        <i class="fas fa-play"></i> Start
+      </button>
+      <button class="dashboard-button about-btn" data-url="{% url 'about' %}">
+        <i class="fas fa-info-circle"></i> About
+      </button>
+      <button class="dashboard-button logout-btn" data-url="{% url 'auth' %}">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.dashboard-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.location.href = btn.getAttribute('data-url');
+      });
+    });
+  </script>
+</body>
+</html>

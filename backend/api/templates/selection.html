@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Finder</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+  color:#fff;
+  padding:20px;
+}
+.card{
+  width:100%;
+  max-width:540px;
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(22px);
+  border-radius:24px;
+  padding:40px 32px;
+  border:1px solid rgba(255,215,0,0.25);
+  box-shadow:0 25px 60px rgba(0,0,0,0.8);
+  animation:fadeIn 0.6s ease;
+}
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+h1{
+  text-align:center;
+  margin-bottom:28px;
+  font-size:28px;
+  background:linear-gradient(90deg,#ffd700,#00c896);
+  background-clip: text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+label{
+  font-size:12px;
+  color:#cfcfcf;
+}
+input, select{
+  padding:11px 12px;
+  border-radius:10px;
+  border:none;
+  outline:none;
+  background:rgba(255,255,255,0.07);
+  color:#fff;
+  font-size:13px;
+  transition:0.25s;
+}
+input::placeholder{
+  color:#aaa;
+}
+input:focus, select:focus{
+  background:rgba(255,255,255,0.12);
+  box-shadow:0 0 10px rgba(255,215,0,0.35);
+}
+select option{
+  background:#222;
+  color:#fff;
+}
+.row{
+  display:flex;
+  gap:14px;
+}
+.row .field{
+  flex:1;
+}
+.radio{
+  display:flex;
+  gap:18px;
+  margin-top:4px;
+}
+.radio label{
+  font-size:13px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+}
+input[type="radio"]{
+  accent-color:#ffd700;
+}
+.buttons{
+  margin-top:22px;
+  display:flex;
+  gap:12px;
+}
+button{
+  flex:1;
+  padding:13px;
+  border:none;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+  letter-spacing:0.3px;
+}
+.submit{
+  background:linear-gradient(90deg,#ffd700,#00c896);
+  color:#000;
+  box-shadow:0 8px 25px rgba(255,215,0,0.4);
+}
+.reset{
+  background:rgba(255,255,255,0.1);
+  color:#fff;
+}
+button:hover{
+  transform:translateY(-3px);
+  opacity:0.95;
+}
+button:active{
+  transform:scale(0.97);
+}
+@media(max-width:500px){
+  .row{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Find Your Course</h1>
+  <form method="post" action="{% url 'selection' %}">
+    {% csrf_token %}
+    <div class="field">
+      <label>Course</label>
+      <input type="text" name="course" placeholder="e.g. Python, AI, Web..." required>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Skill Level</label>
+        <select name="skillLevel" required>
+          <option value="">Select</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Plan</label>
+        <select name="plan" required>
+          <option value="">Select</option>
+          <option value="free">Free</option>
+          <option value="paid">Paid</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Certificate</label>
+        <div class="radio">
+          <label><input type="radio" name="certificate" value="yes" required> Yes</label>
+          <label><input type="radio" name="certificate" value="no"> No</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Mode</label>
+        <div class="radio">
+          <label><input type="radio" name="learningMode" value="video" required> Video</label>
+          <label><input type="radio" name="learningMode" value="text"> Text</label>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Language</label>
+      <select name="language">
+        <option value="">Select</option>
+        <option value="english">English</option>
+        <option value="hindi">Hindi</option>
+      </select>
+    </div>
+    <div class="buttons">
+      <button type="submit" class="submit">Get Courses</button>
+      <button type="reset" class="reset">Clear</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
