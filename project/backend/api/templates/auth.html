@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Auth | Course Site Finder</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+  color:#fff;
+  padding:20px;
+}
+.container{
+  display:flex;
+  width:900px;
+  max-width:95%;
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(18px);
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 25px 60px rgba(0,0,0,0.8);
+  border:1px solid rgba(255,215,0,0.2);
+}
+.left{
+  flex:1;
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:linear-gradient(135deg,#ffd700,#00c896);
+  color:#000;
+}
+
+.left h2{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.right{
+  flex:1;
+  padding:40px;
+}
+
+.right h2{
+  margin-bottom:20px;
+  font-size:26px;
+  background:linear-gradient(90deg,#ffd700,#00c896);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.form-group{
+  margin-bottom:15px;
+  position:relative;
+}
+
+input{
+  width:100%;
+  padding:12px 40px 12px 12px;
+  border-radius:10px;
+  border:none;
+  outline:none;
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+}
+
+input:focus{
+  background:rgba(255,255,255,0.15);
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#ffd700,#00c896);
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.link{
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+}
+
+.link a{
+  color:#00c896;
+  cursor:pointer;
+}
+
+.error{
+  color:#ff6b6b;
+  text-align:center;
+  margin-bottom:10px;
+  font-size:13px;
+}
+
+/* 👁️ */
+.toggle-password{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  color:#ffd700;
+}
+
+@media(max-width:768px){
+  .container{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="left">
+    <h2>Welcome 👋</h2>
+    <p>Login or create your account to discover courses.</p>
+  </div>
+  <div class="right">
+
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="error">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+
+    <div id="loginForm">
+      <h2>Login</h2>
+
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="login">
+
+        <div class="form-group">
+          <input type="text" name="username" placeholder="Username" required>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="login_password" name="password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword('login_password')">👁️</span>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="link">
+        Don't have an account? <a onclick="toggleForm()">Register</a>
+      </div>
+    </div>
+
+    <div id="registerForm" style="display:none;">
+      <h2>Register</h2>
+
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="register">
+
+        <div class="form-group">
+          <input type="text" name="username" placeholder="Username" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="reg_password" name="password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword('reg_password')">👁️</span>
+        </div>
+
+        <div class="form-group">
+          <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <div class="link">
+        Already have an account? <a onclick="toggleForm()">Login</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function toggleForm(){
+  const login = document.getElementById("loginForm");
+  const register = document.getElementById("registerForm");
+
+  if(login.style.display === "none"){
+    login.style.display = "block";
+    register.style.display = "none";
+  }else{
+    login.style.display = "none";
+    register.style.display = "block";
+  }
+}
+
+function togglePassword(id){
+  const input = document.getElementById(id);
+  input.type = input.type === "password" ? "text" : "password";
+}
+</script>
+
+</body>
+</html>

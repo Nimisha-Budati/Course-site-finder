@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-image: url("images/background_image3.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .welcome-page {
+      min-width: 420px;
+      animation: fadeIn 0.8s ease;
+      background-color: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .welcome-title {
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #0b2a3b;
+      margin: 0;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #1b3c4a;
+      line-height: 1.5;
+    }
+
+    .next-button {
+      margin-top: 40px;
+      padding: 10px 35px;
+      font-size: 18px;
+      border-radius: 6px;
+      border: none;
+      color: #ffffff;
+
+      /* SAME BUTTON STYLE AS LOGIN */
+      background: linear-gradient(135deg, #2c5364, #0f2027);
+
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      cursor: pointer;
+    }
+
+    .next-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .next-button:active {
+      opacity: 0.7;
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="welcome-page">
+    <h1 class="welcome-title">WELCOME TO</h1>
+    <h1 class="welcome-title">COURSE SITE FINDER</h1>
+
+    <p>
+      “This application will help you find the best online learning platform
+      based on your preferences.”
+    </p>
+
+    <button class="next-button" onclick="navigateToNextPage()">
+      Next
+    </button>
+  </div>
+
+  <script>
+    function navigateToNextPage() {
+      window.location.href = "home_test.html";
+    }
+  </script>
+</body>
+</html>
